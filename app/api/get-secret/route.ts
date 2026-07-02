@@ -32,7 +32,7 @@ async function handleRequest(request: NextRequest) {
 
   if (!internalToken || internalToken !== process.env.INTERNAL_API_TOKEN) {
     return NextResponse.json(
-      { error: "Unauthorized: missing or invalid internal token" },
+      { error: "Unauthorized" },
       { status: 401 }
     );
   }
